@@ -3481,6 +3481,10 @@ display: none;
 
 	display:block;
 
+	height: 500px;
+
+	object-fit: cover;
+
 }
 
 
@@ -3501,7 +3505,7 @@ display: none;
 
 	position:relative;
 
-	padding:50px 50px;
+	padding:30px 30px;
 
 }
 
@@ -8722,7 +8726,7 @@ display: none;
 
 	text-align:center;
 
-	padding:100px 0px 100px;
+	padding:200px 0px 200px;
 
 	background-repeat:no-repeat;
 
