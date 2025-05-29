@@ -1,72 +1,4 @@
-/* Global Industry - Factory and Industry HTML Template*/
 
-
-
-/************ TABLE OF CONTENTS ***************
-
-1. Fonts
-
-2. Reset
-
-3. Global
-
-4. Main Header / Style Two / Style Three
-
-5. Main Slider
-
-6. Services Section
-
-7. Projects Section / Style Two
-
-8. Testimonial Section
-
-9. Counter Section
-
-10. News Section
-
-11. Team Section
-
-12. Clients Section
-
-13. Map Section
-
-14. Main Footer
-
-15. Welcome Section
-
-16. Subscribe Section
-
-17. Accordian Section
-
-18. Call To Action Section
-
-19. Work Process Section
-
-20. Page Title
-
-21. Error Section
-
-22. Comming Soon Section
-
-23. Services Single Section
-
-24. Projects Detail Section
-
-25. News Blog
-
-26. Comments Section
-
-27. Comments Form
-
-28. Shop Item
-
-29. Shop Detail
-
-30. Contact Form
-
-
-
-**********************************************/
 
 
 
@@ -89,14 +21,6 @@ font-family: 'Raleway', sans-serif;*/
 @import url('animate.css');
 
 @import url('owl.css');
-
-@import url('jquery-ui.css');
-
-@import url('jquery.fancybox.min.css');
-
-@import url('jquery.bootstrap-touchspin.css');
-
-@import url('jquery.mCustomScrollbar.min.css');
 
 
 
@@ -1692,6 +1616,14 @@ img{
   display: block;
 }
 
+.list-style-two a {
+	color: #333333;
+}
+
+.list-style-two a:hover {
+	color: #ffb200;
+}
+
 
 
 .main-header .info-box{
@@ -1988,7 +1920,7 @@ img{
 
 	padding:20px 0px !important;
 
-	color:#444444 !important;
+	color:#444444;
 
 	font-size: 14px;
 
@@ -1996,7 +1928,102 @@ img{
 
 }
 
+.custom-banner {
+	width: 100%;
+	background-image: url("../images/main-slider/slider.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	padding: 200px 0 100px;
+	position: relative;
+	color: #fff;
+	}
 
+	.custom-banner::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	}
+
+	.banner-container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 20px;
+	position: relative;
+	z-index: 1;
+	}
+
+	.banner-content {
+	max-width: 720px;
+	}
+
+	.banner-title {
+	font-size: 2.5rem;
+	line-height: 1.2;
+	margin-bottom: 20px;
+	animation: fadeInUp 1s ease;
+	}
+
+	.banner-text {
+	font-size: 1.2rem;
+	line-height: 1.5;
+	margin-bottom: 30px;
+	animation: fadeInUp 1s ease 0.3s forwards;
+	opacity: 0;
+	}
+
+	@media (max-width: 992px) {
+	.banner-title {
+	font-size: 2rem;
+	}
+
+	.banner-text {
+	font-size: 1.1rem;
+	}
+	}
+
+	@media (max-width: 768px) {
+	.custom-banner {
+	padding: 160px 0 80px;
+	}
+
+	.banner-title {
+	font-size: 1.8rem;
+	}
+
+	.banner-text {
+	font-size: 1rem;
+	}
+	}
+
+	@media (max-width: 576px) {
+	.custom-banner {
+	padding: 160px 0 80px;
+	}
+
+	.banner-title {
+	font-size: 1.5rem;
+	}
+
+	.banner-text {
+	font-size: 0.9rem;
+	}
+	}
+
+	@keyframes fadeInUp {
+	from {
+	opacity: 0;
+	transform: translateY(20px);
+	}
+	to {
+	opacity: 1;
+	transform: translateY(0);
+	}
+	}
 
 .sticky-header .main-menu .navigation > li > a:after{
 
