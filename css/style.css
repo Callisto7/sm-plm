@@ -196,17 +196,13 @@ p{
 
 
 .certificate-item {
+	flex-direction: column-reverse;
 	display: flex;
-	gap: 40px;
-}
-
-@media (max-width: 991px) {
-	.certificate-item {
-		flex-direction: column-reverse;
-	}
+	gap: 24px;
 }
 
 .certificate-partner p {
+	margin: 0;
 	font-size: 20px;
 	font-weight: 600;
 	color: #101010;
