@@ -195,6 +195,34 @@ p{
 }
 
 
+.certificate-item {
+	display: flex;
+	gap: 40px;
+}
+
+.certificate-partner p {
+	font-size: 20px;
+	font-weight: 600;
+	color: #101010;
+}
+
+.pad80 {
+	padding: 80px 0;
+}
+
+.title-box h3 {
+	font-weight: 700;
+	color: #101010;
+	margin-bottom: 40px;
+}
+
+
+.sec-title h4 {
+	font-weight: 700;
+	color: #101010;
+	margin-bottom: 18px;
+}
+
 
 .page-wrapper{
 
@@ -924,7 +952,7 @@ img{
 
 	position:relative;
 
-	margin-bottom:70px;
+	margin-bottom:40px;
 
 }
 
