@@ -195,18 +195,30 @@
     <script>
       (function () {
         var container = document.querySelector(".certificate-image");
-        if (container) {
-          container.addEventListener("click", function () {
-            var src = container.getAttribute("data-src");
+        if (!container) return;
+      
+        container.addEventListener("click", function () {
+          var src = container.getAttribute("data-src");
+          if (!src) return;
+      
+          // Проверка: мобильное устройство?
+          var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+      
+          if (isMobile) {
+            // Просто открыть PDF в новой вкладке
+            window.open(src, "_blank");
+          } else {
+            // Показать лайтбокс (только на ПК)
             var box = document.getElementById("certificate-lightbox");
             var frame = document.getElementById("certificate-lightbox-frame");
-            if (src && box && frame) {
+            if (box && frame) {
               frame.src = src;
               box.style.display = "flex";
               document.body.classList.add("modal-open");
             }
-          });
-        }
+          }
+        });
+      
         var closeBtn = document.getElementById("certificate-lightbox-close");
         var overlay = document.getElementById("certificate-lightbox");
         function closeLightbox() {
