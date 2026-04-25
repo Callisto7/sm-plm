@@ -41,9 +41,27 @@
 		}
 	}
 
+	//Update footer copyright year
+	function updateFooterYear() {
+		var currentYear = String(new Date().getFullYear());
+		$('.js-current-year').text(currentYear);
+		$('.copyright').each(function() {
+			var $copyright = $(this);
+			var text = $copyright.text();
+			if (!text) {
+				return;
+			}
+			var updatedText = text.replace(/(\d{4})(?!.*\d)/, currentYear);
+			if (updatedText !== text) {
+				$copyright.text(updatedText);
+			}
+		});
+	}
+
 	
 
 	headerStyle();
+	updateFooterYear();
 
 	
 
