@@ -121,9 +121,54 @@ const sprutCamRobotCards = [
   },
 ];
 
+const sprutCamRobotSupport = {
+  machineImageSrc: "images/sprut-cam/robot-support-machine.png",
+  machineImageFallbackSrc: "images/sprut-cam/robot-cards/robot-card-002.png",
+  machineImageAlt: "СПРУТКАМ Робот: обработка детали",
+  logosSourceFallback: "images/sprut-cam/robot-support-logos-source.png",
+  logos: [
+    {
+      name: "Universal Robots",
+      src: "images/sprut-cam/robot-brand-logos/logo-001.png",
+    },
+    { name: "COMAU", src: "images/sprut-cam/robot-brand-logos/logo-002.png" },
+    { name: "FANUC", src: "images/sprut-cam/robot-brand-logos/logo-003.png" },
+    { name: "KUKA", src: "images/sprut-cam/robot-brand-logos/logo-004.png" },
+    { name: "AUBO", src: "images/sprut-cam/robot-brand-logos/logo-005.png" },
+    {
+      name: "Staubli",
+      src: "images/sprut-cam/robot-brand-logos/logo-006.png",
+    },
+    { name: "EPSON", src: "images/sprut-cam/robot-brand-logos/logo-007.png" },
+    {
+      name: "Yaskawa",
+      src: "images/sprut-cam/robot-brand-logos/logo-008.png",
+    },
+    {
+      name: "Mitsubishi Electric",
+      src: "images/sprut-cam/robot-brand-logos/logo-009.png",
+    },
+    {
+      name: "Hyundai",
+      src: "images/sprut-cam/robot-brand-logos/logo-010.png",
+    },
+    {
+      name: "Kawasaki",
+      src: "images/sprut-cam/robot-brand-logos/logo-011.png",
+    },
+    { name: "ABB", src: "images/sprut-cam/robot-brand-logos/logo-012.png" },
+  ],
+};
+
 const galleryContainer = document.getElementById("sprutCamGallery");
 const modulesContainer = document.getElementById("sprutCamModulesGrid");
 const robotContainer = document.getElementById("sprutCamRobotGrid");
+const robotSupportMediaContainer = document.getElementById(
+  "sprutCamRobotSupportMedia"
+);
+const robotLogosSliderContainer = document.getElementById(
+  "sprutCamRobotLogosSlider"
+);
 
 if (galleryContainer) {
   galleryContainer.innerHTML = sprutCamGalleryCards
@@ -164,4 +209,54 @@ if (modulesContainer) {
       `
     )
     .join("");
+}
+
+if (robotSupportMediaContainer) {
+  robotSupportMediaContainer.innerHTML = `
+    <img src="${sprutCamRobotSupport.machineImageSrc}" alt="${sprutCamRobotSupport.machineImageAlt}" />
+  `;
+  const supportImage = robotSupportMediaContainer.querySelector("img");
+  if (supportImage) {
+    supportImage.addEventListener("error", () => {
+      supportImage.src = sprutCamRobotSupport.machineImageFallbackSrc;
+      supportImage.addEventListener(
+        "error",
+        () => {
+          robotSupportMediaContainer.innerHTML = `
+            <div class="sprut-cam-robot-support-placeholder">
+              Добавьте изображение станка:<br />
+              images/sprut-cam/robot-support-machine.png
+            </div>
+          `;
+        },
+        { once: true }
+      );
+    });
+  }
+}
+
+if (robotLogosSliderContainer) {
+  const baseItems = sprutCamRobotSupport.logos
+    .map(
+      ({ name, src }) => `
+      <div class="sprut-cam-robot-logo-item" aria-label="${name}">
+        <img src="${src}" alt="${name}" />
+      </div>
+    `
+    )
+    .join("");
+
+  robotLogosSliderContainer.innerHTML = `
+    <div class="sprut-cam-robot-logos-track">
+      ${baseItems}
+      ${baseItems}
+    </div>
+  `;
+
+  const logoImages = robotLogosSliderContainer.querySelectorAll("img");
+  logoImages.forEach((logoImage) => {
+    logoImage.addEventListener("error", () => {
+      logoImage.closest(".sprut-cam-robot-logo-item").remove();
+    });
+  });
 }
