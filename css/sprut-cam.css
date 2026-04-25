@@ -2,6 +2,10 @@
   grid-column: 1 / -1;
 }
 
+.sprut-page-main {
+  padding-bottom: 0;
+}
+
 .sprut-page-robot {
   padding-top: 0;
 }
