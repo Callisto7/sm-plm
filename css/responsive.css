@@ -8,6 +8,139 @@
 
 }
 
+@media only screen and (max-width: 991px) {
+	.main-header .sticky-header .auto-container{
+		position:relative;
+	}
+
+	.main-header .sticky-header .right-col{
+		margin-left:auto;
+		position:static;
+	}
+
+	.main-header .main-menu{
+		position:static;
+	}
+
+	.main-header .main-menu .navbar-toggler{
+		border:1px solid #d8e4f0 !important;
+		border-radius:10px;
+		background:#ffffff !important;
+		padding:9px 10px;
+		position:relative !important;
+		right:auto !important;
+		top:auto !important;
+	}
+
+	.main-header .main-menu .navbar-toggler .icon-bar{
+		background:#2f4d69 !important;
+		transition:transform 0.22s ease, opacity 0.22s ease;
+		transform-origin:center;
+	}
+
+	.main-header .main-menu .navbar-toggler.is-active .icon-bar:nth-child(1){
+		transform:translateY(6px) rotate(45deg);
+	}
+
+	.main-header .main-menu .navbar-toggler.is-active .icon-bar:nth-child(2){
+		opacity:0;
+	}
+
+	.main-header .main-menu .navbar-toggler.is-active .icon-bar:nth-child(3){
+		transform:translateY(-6px) rotate(-45deg);
+	}
+
+	.main-header .main-menu .navbar-collapse.mobile-menu-panel{
+		position:absolute;
+		top:100%;
+		right:0;
+		width:min(360px, calc(100vw - 30px));
+		margin:0 !important;
+		padding:0;
+		background:#ffffff;
+		border:1px solid #dbe6f2;
+		border-bottom-left-radius:14px;
+		border-bottom-right-radius:14px;
+		box-shadow:0 16px 34px rgba(16,35,57,0.16);
+		overflow:hidden;
+		z-index:120;
+	}
+
+	.main-header .main-menu .navbar-collapse.mobile-menu-panel > .navigation{
+		background:transparent;
+		border:none;
+		padding-top:0;
+	}
+
+	.main-header .main-menu .navbar-collapse.mobile-menu-panel > .navigation > li{
+		border-top:1px solid #edf2f8 !important;
+	}
+
+	.main-header .main-menu .navbar-collapse.mobile-menu-panel > .navigation > li:first-child{
+		border-top:none !important;
+	}
+
+	.main-header .main-menu .navbar-collapse.mobile-menu-panel .navigation > li > a{
+		color:#263a4f !important;
+		background:#ffffff !important;
+		padding:12px 54px 12px 14px !important;
+		font-size:14px;
+		font-weight:600;
+	}
+
+	.main-header .main-menu .navbar-collapse.mobile-menu-panel .navigation > li > ul{
+		background:#f7faff !important;
+		border-top:1px solid #e6edf7 !important;
+		padding:4px 0 !important;
+	}
+
+	.main-header .main-menu .navbar-collapse.mobile-menu-panel .navigation > li > ul > li{
+		border-top:1px solid #e6edf7 !important;
+	}
+
+	.main-header .main-menu .navbar-collapse.mobile-menu-panel .navigation > li > ul > li:first-child{
+		border-top:none !important;
+	}
+
+	.main-header .main-menu .navbar-collapse.mobile-menu-panel .navigation > li > ul > li > a{
+		background:transparent !important;
+		color:#45627f !important;
+		font-size:13px;
+		line-height:1.35;
+		font-weight:600;
+		text-transform:none;
+		padding:10px 14px 10px 20px !important;
+	}
+
+	.main-header .main-menu .navbar-collapse.mobile-menu-panel .navigation li.dropdown .dropdown-btn{
+		top:8px;
+		right:8px;
+		width:34px;
+		height:34px;
+		line-height:32px;
+		border-radius:8px;
+		border:1px solid #d6e3f0;
+		background:#f1f6fb;
+		color:#3b5772;
+	}
+
+	.main-header .main-menu .navbar-collapse.mobile-menu-panel .navigation li.dropdown .dropdown-btn span{
+		transition:transform 0.25s ease;
+	}
+
+	.main-header .main-menu .navbar-collapse.mobile-menu-panel .navigation li.dropdown.is-open .dropdown-btn span{
+		transform:rotate(180deg);
+	}
+
+}
+
+@media only screen and (max-width: 767px) {
+	.main-header .main-menu .navbar-collapse.mobile-menu-panel{
+		width:100%;
+		right:0;
+	}
+}
+
 
 
 @media only screen and (max-width: 1500px){
@@ -933,15 +1066,13 @@
 	.fixed-header .sticky-header .right-col .main-menu .navbar-toggler{
 		position: absolute; 
 	    right: 8px; 
-	    top: 8px;
+	    top: 20px;
 	}
 	.fixed-header .sticky-header .main-menu .navbar-header{
 		padding: 0px;
 	}
 
-    .sticky-header .main-menu .navbar-toggler{
-    	margin-top: 20px;
-    }
+   
     .sticky-header .main-menu .navbar-toggler .icon-bar,
     .main-header.header-style-two .main-menu .navbar-toggler .icon-bar{
     	width: 25px;
@@ -1782,7 +1913,7 @@
 
 	.page-title{
 
-		padding:80px 0px;	
+		padding:120px 0px 60px;	
 
 	}
 
