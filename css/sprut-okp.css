@@ -1,0 +1,180 @@
+.sprut-okp-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 480px);
+  align-items: center;
+  column-gap: 28px;
+}
+
+.sprut-okp-hero .sprut-image img {
+  width: 100%;
+  max-width: 430px;
+  margin-left: auto;
+  display: block;
+}
+
+.sprut-okp-methods-section {
+  --sprut-okp-card-border-color: #9bb85f;
+  display: block;
+}
+
+.sprut-okp-methods-grid {
+  margin-top: 8px;
+}
+
+.sprut-okp-methods-title {
+  margin-bottom: 18px;
+}
+
+.sprut-okp-method-col {
+  margin-bottom: 18px;
+  display: flex;
+}
+
+.sprut-okp-method-card {
+  background: #ffffff;
+  border: 2px solid var(--sprut-okp-card-border-color);
+  border-radius: 14px;
+  padding: 14px 14px 16px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 100%;
+}
+
+.sprut-okp-method-card-media {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: center;
+}
+
+.sprut-okp-method-card-media img {
+  display: block;
+  width: 100%;
+  max-width: 230px;
+  height: auto;
+}
+
+.sprut-okp-method-card h3 {
+  font-size: 16px;
+  line-height: 1.35;
+  margin-bottom: 8px;
+  min-height: 44px;
+  font-weight: 600;
+}
+
+.sprut-okp-method-card p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.45;
+  flex-grow: 1;
+}
+
+.sprut-okp-bottom-image img {
+  display: block;
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+  height: auto;
+}
+
+.sprut-okp-stock-section {
+  display: block;
+  background: linear-gradient(180deg, #f6fbf3 0%, #ffffff 100%);
+}
+
+.sprut-okp-stock-section .sprut-content h2 {
+  margin-bottom: 16px;
+}
+
+.sprut-okp-stock-visual {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 14px;
+  border: 1px solid #d7e6cb;
+  box-shadow:
+    inset 0 0 0 1px rgba(155, 184, 95, 0.2),
+    0 8px 20px rgba(19, 42, 69, 0.08);
+}
+
+.sprut-okp-stock-visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.sprut-okp-economy-section {
+  display: block;
+}
+
+.sprut-okp-economy-grid {
+  margin-top: 32px;
+}
+
+.sprut-okp-economy-col {
+  margin-bottom: 20px;
+}
+
+.sprut-okp-economy-col-title {
+  text-align: center;
+  font-size: 30px;
+  line-height: 1.15;
+  margin-bottom: 14px;
+  color: #26465f;
+}
+
+.sprut-okp-economy-col-title-center {
+  text-align: center;
+  margin: 4px 0 14px;
+}
+
+.sprut-okp-economy-card {
+  background: #ffffff;
+  border: 2px solid #9bb85f;
+  border-radius: 14px;
+  padding: 12px;
+  margin-bottom: 14px;
+  display: flex;
+  gap: 14px;
+}
+
+.sprut-okp-economy-card-media img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.sprut-okp-economy-card-media img.plan {
+  width: 100%;
+  max-width: 100%;
+}
+
+.sprut-okp-economy-card h4 {
+  margin-bottom: 8px;
+  font-size: 23px;
+  line-height: 1.2;
+  color: #21394f;
+  font-weight: 600;
+}
+
+.sprut-okp-economy-card p {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.35;
+  color: #324960;
+  text-wrap-style: balance;
+}
+
+@media (max-width: 991px) {
+  .sprut-okp-hero {
+    grid-template-columns: 1fr;
+    row-gap: 18px;
+  }
+
+  .sprut-okp-hero .sprut-image img {
+    margin: 0 auto;
+    max-width: 360px;
+  }
+}

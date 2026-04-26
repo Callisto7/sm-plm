@@ -7,12 +7,12 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
     />
-    <title>СПРУТКАМ | SM-PLM</title>
+    <title>СПРУТ-ОКП | SM-PLM</title>
     <link href="css/bootstrap.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
     <link href="css/responsive.css" rel="stylesheet" />
     <link href="css/sprut-tp.css" rel="stylesheet" />
-    <link href="css/sprut-cam.css" rel="stylesheet" />
+    <link href="css/sprut-okp.css" rel="stylesheet" />
     <link rel="shortcut icon" href="images/plm_logo.png" type="image/x-icon" />
     <link rel="icon" href="images/plm_logo.png" type="image/x-icon" />
   </head>
@@ -32,8 +32,8 @@
                   class="navbar-toggler"
                   type="button"
                   data-toggle="collapse"
-                  data-target="#sprutCamNavbar"
-                  aria-controls="sprutCamNavbar"
+                  data-target="#sprutOkpNavbar"
+                  aria-controls="sprutOkpNavbar"
                   aria-expanded="false"
                   aria-label="Toggle navigation"
                 >
@@ -42,15 +42,17 @@
                   <span class="icon-bar"></span>
                 </button>
 
-                <div class="navbar-collapse collapse" id="sprutCamNavbar">
+                <div class="navbar-collapse collapse" id="sprutOkpNavbar">
                   <ul class="navigation">
                     <li><a href="index.html#home">Главная</a></li>
                     <li class="dropdown current">
                       <a href="index.html#services">Наши услуги</a>
                       <ul class="dropdown">
                         <li><a href="sprut-tp.html">СПРУТ-ТП</a></li>
-                        <li class="current"><a href="sprut-cam.html">СПРУТКАМ</a></li>
-                        <li><a href="sprut-okp.html">СПРУТ-ОКП</a></li>
+                        <li><a href="sprut-cam.html">СПРУТКАМ</a></li>
+                        <li class="current">
+                          <a href="sprut-okp.html">СПРУТ-ОКП</a>
+                        </li>
                       </ul>
                     </li>
                     <li><a href="index.html#about">О нас</a></li>
@@ -65,80 +67,81 @@
         </div>
       </header>
 
-      <section class="sprut-page sprut-page-main">
+      <section class="sprut-page">
         <div class="auto-container">
-          <div class="sprut-hero">
-            <h1>СПРУТКАМ</h1>
-            <p>
-              СПРУТКАМ - CAD/CAM система, которая дает технологам инструмент
-              разработки управляющих программ для станков с ЧПУ и промышленных
-              роботов.
-            </p>
-          </div>
-
-          <article class="sprut-section sprut-section-overview">
-            <div class="sprut-content">
-              <h2>CAD/CAM система для современного производства</h2>
+          <div class="sprut-hero sprut-okp-hero">
+            <div class="sprut-okp-hero-text">
+              <h1>СПРУТ-ОКП - управление и планирование производства</h1>
               <p>
-                СПРУТКАМ помогает быстро подготавливать управляющие программы,
-                сокращать время технологической подготовки и повышать
-                предсказуемость обработки на станках с ЧПУ.
-              </p>
-              <p>
-                Система применяется для фрезерной, токарной и
-                многоосевой обработки, а также для программирования
-                промышленных роботов.
+                Автоматизация полного цикла: заказы, планирование, производство,
+                контроль качества, аналитика.
               </p>
             </div>
             <div class="sprut-image">
-              <img src="images/sprut-cam/cam-01.png" alt="СПРУТКАМ: обработка детали" />
+              <img
+                src="images/sprut-okp/okp-flow.png"
+                alt="СПРУТ-ОКП: управление и планирование производства"
+              />
             </div>
-          </article>
+          </div>
 
-          <article class="sprut-section sprut-section-cases">
-            <div class="sprut-content">
-              <h2>СПРУТКАМ в работе</h2>
-            </div>
-            <div class="sprut-cam-gallery" id="sprutCamGallery"></div>
-          </article>
-
-          <article class="sprut-section sprut-section-gallery">
-            <div class="sprut-content">
-              <h2>Решения для любого станка с ЧПУ</h2>
-            </div>
-            <div class="sprut-cam-modules-grid" id="sprutCamModulesGrid"></div>
-          </article>
-        </div>
-      </section>
-
-      <section class="sprut-page sprut-page-robot">
-        <div class="auto-container">
-          <article class="sprut-section sprut-section-robot">
-            <div class="sprut-content">
-              <h2>
-                СПРУТКАМ Робот - Универсальная среда для программирования
-                промышленных роботов
-              </h2>
-            </div>
-            <div class="sprut-cam-robot-grid" id="sprutCamRobotGrid"></div>
-          </article>
-
-          <article class="sprut-section sprut-section-robot-support">
-            <div class="sprut-content">
-              <h2>Поддерживаем любые модели роботов</h2>
-            </div>
-            <div class="sprut-cam-robot-support-layout">
-              <div
-                class="sprut-cam-robot-support-media"
-                id="sprutCamRobotSupportMedia"
-              ></div>
-              <div class="sprut-cam-robot-support-logos">
-                <div
-                  class="sprut-cam-robot-logos-slider"
-                  id="sprutCamRobotLogosSlider"
-                ></div>
+          <article class="sprut-section sprut-okp-methods-section">
+            <div class="row">
+              <div class="col-12">
+                <h2 class="sprut-okp-methods-title">
+                  Многоуровневое планирование и различные методы планирования
+                </h2>
               </div>
             </div>
+            <div
+              class="row sprut-okp-methods-grid"
+              id="sprutOkpMethodsGrid"
+            ></div>
+
+            <div class="sprut-okp-bottom-image">
+              <img
+                src="images/sprut-okp/okp-bottom-scheme.png"
+                alt="СПРУТ-ОКП: уровни оперативно-календарного планирования"
+              />
+            </div>
+          </article>
+
+          <article class="sprut-section sprut-okp-stock-section">
+            <div class="sprut-content">
+              <h2>Возможность отслеживания и учета складских остатков</h2>
+            </div>
+            <div class="sprut-okp-stock-visual">
+              <img
+                src="images/sprut-okp/okp-stock-tracking.png"
+                alt="СПРУТ-ОКП: отслеживание и учет складских остатков"
+              />
+            </div>
+          </article>
+
+          <article class="sprut-section sprut-okp-stock-section">
+            <div class="sprut-content">
+              <h2>Диспетчеризация производства</h2>
+            </div>
+            <div class="sprut-okp-stock-visual">
+              <img
+                src="images/sprut-okp/okp-dispatching.png"
+                alt="СПРУТ-ОКП: диспетчеризация производства"
+              />
+            </div>
+          </article>
+
+          <article class="sprut-section sprut-okp-economy-section">
+            <div class="sprut-content">
+              <h2>
+                Экономические расчеты, калькуляция себестоимости продукции,
+                план-фактный анализ производства
+              </h2>
+            </div>
+
+            <div
+              class="row sprut-okp-economy-grid"
+              id="sprutOkpEconomyGrid"
+            ></div>
           </article>
         </div>
       </section>
@@ -148,7 +151,8 @@
           <div class="row clearfix">
             <div class="column col-lg-8 col-md-12 col-sm-12">
               <div class="copyright">
-                &copy; Все права защищены <span class="js-current-year">2026</span>.
+                &copy; Все права защищены
+                <span class="js-current-year">2026</span>.
               </div>
             </div>
 
@@ -178,6 +182,6 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/owl.js"></script>
     <script src="js/script.js"></script>
-    <script src="js/sprut-cam.js"></script>
+    <script src="js/sprut-okp.js"></script>
   </body>
 </html>
