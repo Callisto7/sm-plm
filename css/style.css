@@ -19312,3 +19312,43 @@ display: none;
 	display:none;
 
 }
+
+.contacts-grid {
+	display: flex;
+	justify-content: space-between;
+	gap: 40px;
+}
+
+.contacts-col {
+	flex: 1;
+}
+
+.contacts-col-right {
+	display: flex;
+	gap: 60px;
+	justify-content: flex-end;
+}
+
+.contacts-block h4,
+.contacts-col h4 {
+	margin-bottom: 10px;
+}
+
+.contacts-col p,
+.contacts-block p {
+	margin: 0;
+}
+
+.contacts-col a,
+.contacts-block a {
+	color: inherit;
+	text-decoration: none;
+}
+
+@media (max-width: 768px) {
+	.contacts-grid,
+	.contacts-col-right {
+		flex-direction: column;
+		gap: 20px;
+	}
+}
